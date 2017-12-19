@@ -26,6 +26,8 @@ Rails.application.routes.draw do
 
 
   ### Articles ###
+  # /articles
+  get '/articles',             to: 'articles#index',                             as: :articles
   # /articles/:id
   get '/articles/:article_id', to: 'articles#show', article_id: id_format_regex, as: :article
 
