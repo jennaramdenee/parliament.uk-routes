@@ -25,6 +25,10 @@ Rails.application.routes.draw do
   # /who-should-i-contact-with-my-issue
   get '/who-should-i-contact-with-my-issue', to: 'meta#who_should_i_contact_with_my_issue'
 
+  ## Work Packages ##
+  get '/work-packages',                  to: 'work_packages#index', as: :work_packages
+  get '/work-packages/:work_package_id', to: 'work_packages#show',  as: :work_package, work_package_id: id_format_regex
+
   ### Articles ###
   get '/articles/:article_id', to: 'articles#show', article_id: id_format_regex, as: :article
 
