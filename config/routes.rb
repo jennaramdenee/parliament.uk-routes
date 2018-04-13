@@ -27,7 +27,7 @@ Rails.application.routes.draw do
 
   ## Work Packages ##
   get '/work-packages',                  to: 'work_packages#index', as: :work_packages
-  get '/work-packages/:work_package_id', to: 'work_packages#show',  as: :work_package, work_package_id: id_format_regex
+  get '/work-packages/:work_package_id', to: 'work_packages#show',  as: :work_package
 
   ### Articles ###
   get '/articles/:article_id', to: 'articles#show', article_id: id_format_regex, as: :article
