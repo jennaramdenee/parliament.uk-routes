@@ -34,8 +34,12 @@ Rails.application.routes.draw do
   get '/work-packages/:work_package_id', to: 'work_packages#show',  as: :work_package
 
   ## Procedures ##
-  get '/procedures',                to: 'procedures#index', as: :procedures
+  get '/procedures',               to: 'procedures#index', as: :procedures
   get '/procedures/:procedure_id', to: 'procedures#show',  as: :procedure
+
+  ## Legislation ##
+  get '/legislations',                 to: 'legislations#index', as: :legislations
+  get '/legislations/:legislation_id', to: 'legislations#show',  as: :legislation
 
   ### Articles ###
   get '/articles/:article_id', to: 'articles#show', article_id: id_format_regex, as: :article
